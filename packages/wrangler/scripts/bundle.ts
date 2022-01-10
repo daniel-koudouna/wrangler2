@@ -13,7 +13,7 @@ async function run() {
     format: "cjs",
     // minify: true, // TODO: enable this again
     external: ["fsevents", "esbuild", "miniflare", "@miniflare/core"], // todo - bundle miniflare too
-    sourcemap: true,
+    sourcemap: "inline",
     inject: [path.join(__dirname, "../import_meta_url.js")],
     define: {
       "import.meta.url": "import_meta_url",
